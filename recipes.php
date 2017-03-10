@@ -9,28 +9,43 @@
 	<link rel="stylesheet" href="GIT/restaurant_la_div/recipes/css/style.css">
 	 
 <style>
+body{
+	background-color: #483932 ;
+}
+header{
+	color: #E0D9D3;
+	background-image: url(http://images.marmitoncdn.org/recipephotos/multiphoto/a7/a759f44d-4bf7-48bc-9999-4535cde1223e_normal.jpg);
+	background-repeat: no-repeat;
+	text-align: center;
+}
  #article{
+ 	
  	width: 50px;
  	height: 50px;
+ 	float: left;
+
  	
  }
  #aside{
+ 	width: 400px;
+ 	height: 50px;
  	font-size: 30px;
+ 	float: right;
+ 	background-color: #B38367;
+ 	color: #E0D9D3;
+ 	f
  }
  
 </style>
-
 </head>
 <body>
-
 <header>
-<h1>Les nouvelles recettes du chef<h1>	
+<h1>Les nouvelles recettes du chef<h1>
+<h3><a href="index.php">Retour accueil</a><h3>
 </header>
 
 <section class="container"> 
-
-
-<div id="article" img src="GIT/restaurant_la_div/recipes/img/salade.jpg" alt="recette 1"></div>
+<div id="article" ><img src="assets/img/salade.jpg" alt="recette 1"></div>
 <div id="aside">
 <p><h6>
 Temps de préparation : 30 minutes
@@ -54,7 +69,7 @@ Cuire à part les spaghettini et bien mélanger avec les légumes avant de servi
 
 
 
-<div id="article" img src="GIT/restaurant_la_div/recipes/img/spaguettis.jpg" alt="recette 1"></div>
+<div id="article" ><img src="assets/img/spaguettis.jpg" alt="recette 2"></div>
 <div id="aside">
 <p><h6>Temps de préparation : 5 minutes
 Temps de cuisson : 15 minutes
@@ -70,7 +85,7 @@ Allumer le four à 180°C, déposer le saumon dans un plat allant au four, éplu
 Étaler la crème sur le poisson, parsemer les échalotes dessus, saler, mettre au four. Quand les échalotes brunissent le poisson est cuit, servir avec riz, pommes vapeur. 
 En cas de poisson congelé mettre le four à 150°C. Cuisson un peu plus longue pour assurer la décongélation du poisson.
 Boisson conseillée :<h6></p></div>
-<div id="" ="article" img src="GIT/restaurant_la_div/recipes/img/viandegrillée.jpg" alt="recette 1"></div>
+<div id="" ="article"> <img src="assets/img/viandegrillée.jpg" alt="recette 3"></div>
 <div id="aside"><h6>
 <p>Temps de préparation : 5 minutes
 Temps de cuisson : 30 minutes
