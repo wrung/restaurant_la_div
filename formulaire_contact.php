@@ -53,6 +53,7 @@ if(!empty($_POST)){
          $errorsText = implode('<br>',$errors);
                 echo'<strong>Erreurs :</strong>';
                 echo $errorsText;
+                echo $errors;
     }
 
     }
