@@ -1,6 +1,6 @@
 <?php
 
-require_once './inc/connect.php';
+require_once '../inc/connect.php';
 
 $post = [];
 $errors = [];
@@ -11,7 +11,9 @@ if(isset($_GET['message']) && !empty($_GET['message'])){
 }
 
 
-if(!empty($_POST)){ 
+if(!empty($_POST)){
+        // On nettoie les données en retirant les espaces en début et fin de chaine(trim)
+        // puis en supprimant les balises html et php 
 
     foreach($_POST as $key => $value){
         $post[$key] = trim(strip_tags($value));
@@ -21,14 +23,14 @@ if(!empty($_POST)){
             $errors[] = 'Le mot de passe ne convient pas';
     }
 
-    if(empty($post['username'])){
+    if(empty($post['email'])){
         $errors[] = 'L\'username ne correspond pas';
     }
 
     if(count($errors) === 0){
-        $query = $bdd->prepare('SELECT * FROM users WHERE username = :dataUsername');
+        $query = $bdd->prepare('SELECT * FROM users WHERE email = :dataEmail');
 
-        $query->bindValue(':dataUsername', $post['username']);
+        $query->bindValue(':dataEmail', $post['email']);
         
         if($query->execute()){
             $user = $query->fetch(PDO::FETCH_ASSOC);
@@ -37,8 +39,8 @@ if(!empty($_POST)){
                 { 
                     session_start();
                     $_SESSION['id'] = $user['id'];
-                    $_SESSION['username'] = $user['username'];
-                   
+                    $_SESSION['email'] = $user['email'];
+                  //  $_SESSION['prenom'] = $user['prenom'];
 
                     header("Location: ./index.php");
                 }
@@ -47,13 +49,13 @@ if(!empty($_POST)){
                     echo "password incorrect";
                 }
             }else{
-                echo "Username incorrect";
+                echo "Email incorrect";
             }
 
         } else {
-                
+                // Erreur de dévellopement
             var_dump($query->errorInfo());
-                die; 
+                die; // alias de exit(); => die('Hello World');
             }
         }
     }
@@ -81,8 +83,8 @@ if(!empty($_POST)){
 
         <form method="post">
             <br>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
 
             <br>
             <label for="password">Password</label>
