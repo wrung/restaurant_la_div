@@ -65,9 +65,19 @@ if(!empty($_POST)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Restaurant la DIV</title>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+     <!-- Déclaration des Feuilles de Styles -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- FontAwesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <style>
         h3 {
             text-align:center;
@@ -76,19 +86,38 @@ if(!empty($_POST)){
     </style>
 </head>
 <body>
-   
-    <!--------------------------------------------------
+           <!--    A brancher sur l'admin (table options)-->
+    <header class="top">
+        <div class="coordonnees">
+            <h1>Restaurant La DIV</h1>
+            <p>1 rue de l'avenue, 33000 Bordeaux
+                <br>01.23.45.67.89</p>
+        </div>
+        <div class="contact">
+            <a href="contact.php">Nous contacter</a>
+        </div>
+    </header>
+
+    <div class="slider">
+        <img src="assets/img/slider.jpg" alt="projecteur">
+    </div>
+     <main>
+
+        <!--    A brancher sur l'admin (table recettes)-->
+        <!--<h2 class="title">Les recettes des chefs</h2> -->
+
+        <!--------------------------------------------------
                         Section : Contact
         -------------------------------------------------->
         
         <section id="contact">
             <div class="container">
                 <div class="row">
-                    <h3>Nouveau contact</h3>
                     <div class="col-sm-8 col-sm-push-2 col-xs-10 col-xs-push-1">
                         <form id="contact-form" class="form-horizontal" enctype="multipart/form-data"
                             action="#" method="post">
                             
+                            <legend>Formulaire de contact</legend>
                             <!-- Nom et Prenom-->
                             <div class="form-group">
                                 <div class="col-xs-12">
@@ -125,9 +154,10 @@ if(!empty($_POST)){
                                                    
                             <!-- Bouton d'Envoi -->
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <button type="submit" class="btn btn-primary" name="contact" value="Envoyer ma Demande">Envoyer ma Demande</button>
+                                <div class="col-xs-12" >
+                                    <button type="submit" class="btn btn-default center-block" name="contact" value="Envoyer ma Demande">Envoyer ma Demande</button>
                                 </div>
+                                
                             </div>
                             
                         </form>    
@@ -135,5 +165,14 @@ if(!empty($_POST)){
                 </div>
             </div>
         </section>
+
+        <br>
+        <br>
+        <p class="text-center">
+            <a class="bouton" href="recettes.php">Découvrir toutes<br>les recettes des chefs</a>
+        </p>
+
+    </main>
+    
 </body>
 </html>
