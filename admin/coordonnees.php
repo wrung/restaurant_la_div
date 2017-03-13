@@ -1,23 +1,14 @@
 <?php
     require_once '../inc/connect.php';
-
     session_start();
 
-    if(!isset($_SESSION['user']) || empty($_SESSION['user'])){
-        header('location:connexion.php');
-        die;
-    }
-    elseif($_SESSION['user']['role'] != 'administrateur'){
+    if(!isset($_SESSION['user']) || empty($_SESSION['user']) || $_SESSION['user']['role'] != 'administrateur'){
         header('location:index.php');
         die;
     }
 
-
     $post = [];
     $errors = [];
-    $uploadDir = 'uploads';
-    $extensionsValides = ['image/jpg', 'image/jpeg', 'image/gif', 'image/pjpeg', 'image/png'];
-    $maxSize = 1048576*2;
 
     if(!empty($_POST)){
         // nettoyage des données
@@ -37,7 +28,7 @@
         if(strlen($post['city']))
             $errors[] = 'La Ville doit être renseignée.';
         
-        if(!preg_match("/[0-9]{10,}/", $post['phone']))
+        if(!preg_match("#^[0-9]{10}$#", $post['phone']))
             $errors[] = 'Le numéro de téléphone n\'est pas valide.';
 
 
@@ -49,12 +40,13 @@
         // données valides
         else {
 
-            $update = $bdd->prepare('UPDATE options SET name=:name, street=:street, zipcode=:zipcode, phone=:phone WHERE id=:id');
+            $update = $bdd->prepare('UPDATE options SET name=:name, street=:street, zipcode=:zipcode, phone=:phone, email=:email WHERE id=:id');
             $update->bindValue(':id', 1);
             $update->bindValue(':name', $post['name']);
             $update->bindValue(':street', $post['street']);
             $update->bindValue(':zipcode', $post['zipcode']);
             $update->bindValue(':phone', $post['phone']);
+            $update->bindValue(':email', $post['email']);
 
             if($update->execute()) {
                 $successText = 'Les coordonées ont bien été modifiés !';
@@ -103,6 +95,10 @@
         <p>
             <label for="phone">Téléphone</label><br>
             <input type="text" name="phone" id="phone" value="<?=$infos['phone'] ?>">
+        </p>
+        <p>
+            <label for="email">Email</label><br>
+            <input type="text" name="email" id="email" value="<?=$infos['email'] ?>">
         </p>
         <p><input type="submit" value="Enregistrer les modifications">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php">Retour</a></p>
     </form>

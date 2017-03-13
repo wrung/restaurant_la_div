@@ -6,12 +6,16 @@
     if($select->execute())
         $infos = $select->fetch(PDO::FETCH_ASSOC);
 
+    $select = $bdd->prepare('SELECT * FROM recipes ORDER BY id DESC LIMIT 3');
+    if($select->execute())
+        $recipes = $select->fetchAll(PDO::FETCH_ASSOC);
+    
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <title>Restaurant La DIV</title>
+    <title><?=$infos['name'] ?></title>
 
     <!-- Déclaration des Feuilles de Styles -->
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -27,7 +31,6 @@
 
 <body>
 
-    <!--    A brancher sur l'admin (table options)-->
     <header class="top">
         <div class="coordonnees">
             <h1><?=$infos['name'] ?></h1>
@@ -44,25 +47,15 @@
     </div>
 
     <main>
-
-        <!--    A brancher sur l'admin (table recettes)-->
         <h2 class="title">Les recettes des chefs</h2>
 
         <section>
+        <?php foreach($recipes as $recipe) : ?>
             <article class="vignette">
-                <img src="assets/img/recette1.jpg" alt="Recette 1">
-                <a href="view_recette.php">lire la recette</a>
+                <img src="<?=$recipe['picture'] ?>" alt="<?=$recipe['title'] ?>">
+                <a href="view_recette.php?id=<?=$recipe['id'] ?>">lire la recette</a>
             </article>
-
-            <article class="vignette">
-                <img src="assets/img/recette1.jpg" alt="Recette 1">
-                <a href="view_recette.php">lire la recette</a>
-            </article>
-
-            <article class="vignette">
-                <img src="assets/img/recette1.jpg" alt="Recette 1">
-                <a href="view_recette.php">lire la recette</a>
-            </article>
+        <?php endforeach; ?>
         </section>
 
         <br>
@@ -70,7 +63,6 @@
         <p class="text-center">
             <a class="bouton" href="recettes.php">Découvrir toutes<br>les recettes des chefs</a>
         </p>
-
     </main>
 
     <footer></footer>
