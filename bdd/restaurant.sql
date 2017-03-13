@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 10 Mars 2017 à 16:35
+-- Généré le :  Ven 10 Mars 2017 à 20:07
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -34,7 +34,8 @@ CREATE TABLE `contact_form` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `subject` varchar(255) NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
+  `view` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
