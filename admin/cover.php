@@ -52,10 +52,10 @@
                 $errors[] = "Erreur lors du move_uploaded_file";
 
 
-            $insert = $bdd->prepare('INSERT INTO options (cover) VALUES(:cover)');
-            $insert->bindValue(':cover', $post['cover']);
+            $update = $bdd->prepare('UPDATE options SET cover=:cover WHERE id=:id');
+            $update->bindValue(':cover', $post['cover']);
 
-            if($insert->execute()) {
+            if($update->execute()) {
                 $successText = 'La couverture a bien été modifiée !';
                 header('refresh:3;url:index.php');
             }

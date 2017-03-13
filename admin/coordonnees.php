@@ -49,13 +49,14 @@
         // données valides
         else {
 
-            $insert = $bdd->prepare('INSERT INTO options (name, street, zipcode, phone) VALUES(:name, :street, :zipcode, :phone)');
-            $insert->bindValue(':name', $post['name']);
-            $insert->bindValue(':street', $post['street']);
-            $insert->bindValue(':zipcode', $post['zipcode']);
-            $insert->bindValue(':phone', $post['phone']);
+            $update = $bdd->prepare('UPDATE options SET name=:name, street=:street, zipcode=:zipcode, phone=:phone WHERE id=:id');
+            $update->bindValue(':id', 1);
+            $update->bindValue(':name', $post['name']);
+            $update->bindValue(':street', $post['street']);
+            $update->bindValue(':zipcode', $post['zipcode']);
+            $update->bindValue(':phone', $post['phone']);
 
-            if($insert->execute()) {
+            if($update->execute()) {
                 $successText = 'Les coordonées ont bien été modifiés !';
                 header('refresh:3;url:index.php');
             }

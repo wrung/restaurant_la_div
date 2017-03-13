@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+    require_once 'inc/connect.php';
+
+    $select = $bdd->prepare('SELECT * FROM options WHERE id=:id LIMIT 1');
+    $select->bindValue(':id', 1);
+    if($select->execute())
+        $infos = $select->fetch(PDO::FETCH_ASSOC);
+
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -22,9 +30,9 @@
     <!--    A brancher sur l'admin (table options)-->
     <header class="top">
         <div class="coordonnees">
-            <h1>Restaurant La DIV</h1>
-            <p>1 rue de l'avenue, 33000 Bordeaux
-                <br>01.23.45.67.89</p>
+            <h1><?=$infos['name'] ?></h1>
+            <p><?=$infos['street'] ?>,&nbsp;<?=$infos['zipcode'] ?>&nbsp;<?=$infos['city'] ?>
+                <br><?=$infos['phone'] ?></p>
         </div>
         <div class="contact">
             <a href="contact.php">Nous contacter</a>
@@ -32,7 +40,7 @@
     </header>
 
     <div class="slider">
-        <img src="assets/img/slider.jpg" alt="projecteur">
+        <img src="<?=$infos['cover'] ?>" alt="projecteur">
     </div>
 
     <main>
