@@ -10,109 +10,155 @@
 	 
 <style>
 body{
-	background-color: #483932 ;
+	font-family: sans-serif;
+	font-family: monospace, monospace; 
+	background-color: #483932;	
+}
+#page{
+	width: 1000px;
+	height: 500px;
+	
 }
 header{
 	color: #E0D9D3;
-	background-image: url(http://images.marmitoncdn.org/recipephotos/multiphoto/a7/a759f44d-4bf7-48bc-9999-4535cde1223e_normal.jpg);
-	background-repeat: no-repeat;
 	text-align: center;
+	padding-top: 10px;
+	background-color: #B58264;
+	display: block;
+	
 }
- #article{
- 	
- 	width: 50px;
- 	height: 50px;
+
+.header .bandeau{
+ width: 500px;
+ height: 50px;
+ background-color: #B58264;
+ display: block;
+ 
+}
+.adress{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.contenu{
+	 width: 100%;
+	 height: auto;
+	 padding-top: 10px;
+	 display: block;
+	 	 
+}
+.article1{
+     width: 500px;
+	 height: 200px;
+	 color: #E0D9D3; 
+	 background-color: #505050;
+	 text-align: justify;
+	 display: block;	 
+}
+.article2{
+     width: 500px;
+	 height: 200px;
+	 color: #E0D9D3; 
+	 background-color: #505050;
+	 text-align: justify;
+	 display: block;	 
+}
+.article3{
+     width: 500px;
+	 height: 200px;
+	 color: #E0D9D3;
+	 background-color: #505050; 
+	 text-align: justify;
+	 display: block;
+}
+img{
+ 	width: 100px;
+ 	height: 100px;
  	float: left;
+ 	margin: 0 ,auto;
+ 	box-shadow: 0px 0px 1px;
+ 	padding-top: 15px;
+
+ }
+text{
+ 	width: auto;
+ 	height: auto;
+ 	font-size: 10px;
+ 	margin: 0 0 10px 10px;
+ 	padding-top: 10px;
+ 	
 
  	
- }
- #aside{
- 	width: 400px;
- 	height: 50px;
- 	font-size: 30px;
- 	float: right;
- 	background-color: #B38367;
- 	color: #E0D9D3;
- 	f
- }
+}
+footer{
+	background-color: #91827B;
+	width: 200px;
+	height: 100px; 
+	color: #E0D9D3;
+	text-align: center;
+}
+.h3{
+	color: #E0D9D3;
+}
+.h4{
+	color: #483932;
+}
+h1 {
+	color: white;
+}
  
 </style>
 </head>
 <body>
-<header>
-<h1>Les nouvelles recettes du chef<h1>
-<h3><a href="index.php">Retour accueil</a><h3>
-</header>
+		<header>
+		<div class="bandeau">
+		   <div class="adress"><p>Restaurant LA DIV<br>
+			1 rue de l'avenue, 33000 Bordeaux<br>
+			01 23 45 67 89
+		   </div>
+			<h1>Les nouvelles recettes du chef<h1></p>
+			<h3><a href="index.php">Retour accueil</a><h3>
+		</div>
+		</header>
+<div class="page">
+	<div class="contenu">
+		<div class="article1"> 		
+					<div class="img" ><img src="assets/img/salade.jpg" alt="recette 1">
+						<div class="text">				
+							<p>
+							Temps de préparation : 30 minutes<br>
+							Temps de cuisson : 15 minutes<br>
 
-<section class="container"> 
-<div id="article" ><img src="assets/img/salade.jpg" alt="recette 1"></div>
-<div id="aside">
-<p><h6>
-Temps de préparation : 30 minutes
-Temps de cuisson : 15 minutes
+							</p>
+							</div>
+					</div>
+		</div>
+	<div class="article2">
+		<div class="img" ><img src="assets/img/spaguettis.jpg" alt="recette 2">
+					<div class="text">
+							<p>Temps de préparation : 5 minutes<br>
+							Temps de cuisson : 15 minutes<br>
 
-Ingrédients (pour 4 personnes) :
-- 500 g de spaghettini (numéro 3)
-- 1 oignon rouge
-- 1/2 poivron jaune
-- 1/2 poivron rouge
-- 1/2 aubergine
-- 3 courgettes (petites)
-- 1 carotte
-- piment
-- huile d’olive
-- sel
-- parmesan râpé
-Couper les légumes en petits morceaux. Dans une poêle, faire revenir les légumes dans l’huile bien chaude.
-Laisser rissoler en mélangeant régulièrement jusqu’à ce qu’ils soient légèrement dorés. Saler et ajouter une pincée de piment.
-Cuire à part les spaghettini et bien mélanger avec les légumes avant de servir. Saupoudrer de parmesan.<h6></p></div>
+							</p>
+					</div>
+		</div>
+	</div>
+	<div class="article2">
+		<div class="img"><img src="assets/img/viandegrillée.jpg" alt="recette 3">
+					<div div class="text"><p>
+							Temps de préparation : 5 minutes<br>
+							Temps de cuisson : 30 minutes<br>
 
-
-
-<div id="article" ><img src="assets/img/spaguettis.jpg" alt="recette 2"></div>
-<div id="aside">
-<p><h6>Temps de préparation : 5 minutes
-Temps de cuisson : 15 minutes
-
-Ingrédients (pour 4 Personnes) :
-- 4 pavés de saumon
-- 3 échalotes
-- 20 cl de soja cuisine 
-
-Préparation de la recette :
-
-Allumer le four à 180°C, déposer le saumon dans un plat allant au four, éplucher 3 grosses échalotes (cuisses de poulet).
-Étaler la crème sur le poisson, parsemer les échalotes dessus, saler, mettre au four. Quand les échalotes brunissent le poisson est cuit, servir avec riz, pommes vapeur. 
-En cas de poisson congelé mettre le four à 150°C. Cuisson un peu plus longue pour assurer la décongélation du poisson.
-Boisson conseillée :<h6></p></div>
-<div id="" ="article"> <img src="assets/img/viandegrillée.jpg" alt="recette 3"></div>
-<div id="aside"><h6>
-<p>Temps de préparation : 5 minutes
-Temps de cuisson : 30 minutes
-
-Ingrédients (pour 6 personnes) :
-- 2 aubergines
-- 4 courgettes longues (moyennes)
-- 1 poivron rouge (ou jaune)
-- 2 gousses d'ail
-- 10 cl d'huile d'olive fruitée
-- 3 cuillères à soupe de vinaigre balsamique
-- 1 pincée de sel fin (pas obligatoire)
-
-Préparation de la recette :
-
-Passer les gousses d'ail au presse ail, ou les écraser en purée.
-les ajouter à l'huile d'olive dans un bol.
-Ajouter le vinaigre balsamique, et réserver.
-Détailler les aubergines en fines tranches (2 à 3 mm).
-Détailler les courgettes de la même façon, mais si possible en tranches plus fines que l'aubergine (avec un économe, c'est l'idéal).
-Découper les poivrons en quatre, et les débarasser de leurs graines et parties blanches.<h6></p>
+							</p>
+					</div>
+		</div>
+	</div>
+	</div>
 </div>
-</div>
-</section>
-
 <footer>
-	
+	<div class="decouverte"><p>Contact<p>
+		
+	</div>
 </footer>
 
 
@@ -143,5 +189,4 @@ Découper les poivrons en quatre, et les débarasser de leurs graines et parties
 
 
 </body>
-
 </html>
