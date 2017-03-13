@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE>
 
 <html lang="fr">
@@ -10,155 +11,112 @@
 	 
 <style>
 body{
-	font-family: sans-serif;
-	font-family: monospace, monospace; 
-	background-color: #483932;	
-}
-#page{
-	width: 1000px;
-	height: 500px;
-	
+	background-color: #483932 ;
 }
 header{
-	color: #E0D9D3;
-	text-align: center;
-	padding-top: 10px;
-	background-color: #B58264;
-	display: block;
 	
-}
-
-.header .bandeau{
- width: 500px;
- height: 50px;
- background-color: #B58264;
- display: block;
- 
-}
-.adress{
-	width: 50px;
-	height: 50px;
-	float: left;
-}
-.contenu{
-	 width: 100%;
-	 height: auto;
-	 padding-top: 10px;
-	 display: block;
-	 	 
-}
-.article1{
-     width: 500px;
-	 height: 200px;
-	 color: #E0D9D3; 
-	 background-color: #505050;
-	 text-align: justify;
-	 display: block;	 
-}
-.article2{
-     width: 500px;
-	 height: 200px;
-	 color: #E0D9D3; 
-	 background-color: #505050;
-	 text-align: justify;
-	 display: block;	 
-}
-.article3{
-     width: 500px;
-	 height: 200px;
-	 color: #E0D9D3;
-	 background-color: #505050; 
-	 text-align: justify;
-	 display: block;
-}
-img{
- 	width: 100px;
- 	height: 100px;
- 	float: left;
- 	margin: 0 ,auto;
- 	box-shadow: 0px 0px 1px;
- 	padding-top: 15px;
-
- }
-text{
- 	width: auto;
- 	height: auto;
- 	font-size: 10px;
- 	margin: 0 0 10px 10px;
- 	padding-top: 10px;
- 	
-
- 	
-}
-footer{
-	background-color: #91827B;
-	width: 200px;
-	height: 100px; 
-	color: #E0D9D3;
+	background-color: #B58263;
+	background-repeat: no-repeat;
 	text-align: center;
 }
-.h3{
-	color: #E0D9D3;
-}
-.h4{
-	color: #483932;
-}
-h1 {
-	color: white;
-}
+ #article{
+ 	
+ 	width: 50px;
+ 	height: 50px;
+ 	float: left;
+
+ 	
+ }
+ #aside{
+ 	width: 400px;
+ 	height: 50px;
+ 	font-size: 30px;
+ 	float: right;
+ 	background-color: #B38367;
+ 	color: #E0D9D3;
+ 	f
+ }
+ h1{
+ 	color: #E0D9D3;
+ }
  
 </style>
 </head>
 <body>
-		<header>
-		<div class="bandeau">
-		   <div class="adress"><p>Restaurant LA DIV<br>
-			1 rue de l'avenue, 33000 Bordeaux<br>
-			01 23 45 67 89
-		   </div>
-			<h1>Les nouvelles recettes du chef<h1></p>
-			<h3><a href="index.php">Retour accueil</a><h3>
-		</div>
-		</header>
-<div class="page">
-	<div class="contenu">
-		<div class="article1"> 		
-					<div class="img" ><img src="assets/img/salade.jpg" alt="recette 1">
-						<div class="text">				
-							<p>
-							Temps de préparation : 30 minutes<br>
-							Temps de cuisson : 15 minutes<br>
+<header>
+<h1>Les nouvelles recettes du chef<h1>
+<h3><a href="index.php">Retour accueil</a><h3>
+</header>
 
-							</p>
-							</div>
-					</div>
-		</div>
-	<div class="article2">
-		<div class="img" ><img src="assets/img/spaguettis.jpg" alt="recette 2">
-					<div class="text">
-							<p>Temps de préparation : 5 minutes<br>
-							Temps de cuisson : 15 minutes<br>
+<section class="container"> 
+<div id="article" ><img src="assets/img/salade.jpg" alt="recette 1"></div>
+<div id="aside">
+<p><h6>
+Temps de préparation : 30 minutes
+Temps de cuisson : 15 minutes
 
-							</p>
-					</div>
-		</div>
-	</div>
-	<div class="article2">
-		<div class="img"><img src="assets/img/viandegrillée.jpg" alt="recette 3">
-					<div div class="text"><p>
-							Temps de préparation : 5 minutes<br>
-							Temps de cuisson : 30 minutes<br>
+Ingrédients (pour 4 personnes) :
+- 500 g de spaghettini (numéro 3)
+- 1 oignon rouge
+- 1/2 poivron jaune
+- 1/2 poivron rouge
+- 1/2 aubergine
+- 3 courgettes (petites)
+- 1 carotte
+- piment
+- huile d’olive
+- sel
+- parmesan râpé
+Couper les légumes en petits morceaux. Dans une poêle, faire revenir les légumes dans l’huile bien chaude.
+Laisser rissoler en mélangeant régulièrement jusqu’à ce qu’ils soient légèrement dorés. Saler et ajouter une pincée de piment.
+Cuire à part les spaghettini et bien mélanger avec les légumes avant de servir. Saupoudrer de parmesan.<h6></p></div>
 
-							</p>
-					</div>
-		</div>
-	</div>
-	</div>
+
+
+<div id="article" ><img src="assets/img/spaguettis.jpg" alt="recette 2"></div>
+<div id="aside">
+<p><h6>Temps de préparation : 5 minutes
+Temps de cuisson : 15 minutes
+
+Ingrédients (pour 4 Personnes) :
+- 4 pavés de saumon
+- 3 échalotes
+- 20 cl de soja cuisine 
+
+Préparation de la recette :
+
+Allumer le four à 180°C, déposer le saumon dans un plat allant au four, éplucher 3 grosses échalotes (cuisses de poulet).
+Étaler la crème sur le poisson, parsemer les échalotes dessus, saler, mettre au four. Quand les échalotes brunissent le poisson est cuit, servir avec riz, pommes vapeur. 
+En cas de poisson congelé mettre le four à 150°C. Cuisson un peu plus longue pour assurer la décongélation du poisson.
+Boisson conseillée :<h6></p></div>
+<div id="" ="article"> <img src="assets/img/viandegrillée.jpg" alt="recette 3"></div>
+<div id="aside"><h6>
+<p>Temps de préparation : 5 minutes
+Temps de cuisson : 30 minutes
+
+Ingrédients (pour 6 personnes) :
+- 2 aubergines
+- 4 courgettes longues (moyennes)
+- 1 poivron rouge (ou jaune)
+- 2 gousses d'ail
+- 10 cl d'huile d'olive fruitée
+- 3 cuillères à soupe de vinaigre balsamique
+- 1 pincée de sel fin (pas obligatoire)
+
+Préparation de la recette :
+
+Passer les gousses d'ail au presse ail, ou les écraser en purée.
+les ajouter à l'huile d'olive dans un bol.
+Ajouter le vinaigre balsamique, et réserver.
+Détailler les aubergines en fines tranches (2 à 3 mm).
+Détailler les courgettes de la même façon, mais si possible en tranches plus fines que l'aubergine (avec un économe, c'est l'idéal).
+Découper les poivrons en quatre, et les débarasser de leurs graines et parties blanches.<h6></p>
 </div>
+</div>
+</section>
+
 <footer>
-	<div class="decouverte"><p>Contact<p>
-		
-	</div>
+	
 </footer>
 
 
@@ -189,4 +147,172 @@ h1 {
 
 
 </body>
+
+=======
+<?php
+session_start(); // Permet de démarrer la session
+require_once 'inc/connect.php';
+//
+//if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] == false){
+// 	// Redirection vers la page de connexion si non connecté
+// 	header('Location: login.php');
+// 	die; 
+//}
+
+$maxSize = (1024 * 1000) * 2; // Taille maximum du fichier
+$uploadDir = 'uploads/'; // Répertoire d'upload
+$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
+
+$errors = [];
+$post = [];
+$displayForm = true;
+
+if(!empty($_POST)){
+	foreach($_POST as $key => $value){
+		$post[$key] = trim(strip_tags($value));
+	}
+
+	if(strlen($post['title']) < 5 || strlen($post['title']) > 50){
+		$errors[] = 'Le titre doit comporter entre 5 et 50 caractères';
+	}
+
+	if(strlen($post['content']) < 20){
+		$errors[] = 'La description doit comporter au moins 20 caractères';
+	}
+
+	
+	if(isset($_FILES['picture']) && $_FILES['picture']['error'] === 0){
+
+		$finfo = new finfo();
+		$mimeType = $finfo->file($_FILES['picture']['tmp_name'], FILEINFO_MIME_TYPE);
+
+		$extension = pathinfo($_FILES['picture']['name'], PATHINFO_EXTENSION);
+
+		if(in_array($mimeType, $mimeTypeAvailable)){
+
+			if($_FILES['picture']['size'] <= $maxSize){
+
+				if(!is_dir($uploadDir)){
+					mkdir($uploadDir, 0755);
+				}
+
+				$newPictureName = uniqid('picture_').'.'.$extension;
+
+				if(!move_uploaded_file($_FILES['picture']['tmp_name'], $uploadDir.$newPictureName)){
+					$errors[] = 'Erreur lors de l\'upload de la photo';
+				}
+			}
+			else {
+				$errors[] = 'La taille du fichier excède 2 Mo';
+			}
+
+		}
+		else {
+			$errors[] = 'Le fichier n\'est pas une image valide';
+		}
+	}
+	else {
+		$errors[] = 'Aucune photo sélectionnée';
+	}
+
+
+
+	if(count($errors) === 0){
+
+		if(isset($post['selected'])){
+			$isSelected = 1;
+		}
+		else {
+			$isSelected = 0;	
+		}
+
+
+		$query = $bdd->prepare('INSERT INTO recipes (title, content, picture, date_create, id_user) VALUES(:title, :content, :picture, NOW(), :id_user)');
+
+		$query->bindValue(':title', $post['title']); // PDO::PARAM_STR est le paramètre par défaut et donc non obligatoire si on traite un string
+		$query->bindValue(':content', $post['content']);
+		$query->bindValue(':picture', $uploadDir.$newPictureName);
+        $query->bindValue(':id_user', $post['id_user'], PDO::PARAM_INT);
+
+		if($query->execute()){
+			$success = 'Youpi, la recette est ajoutée avec succès';
+			$displayForm = false;
+		}
+		else {
+			// Erreur de développement
+			var_dump($query->errorInfo());
+			die; // alias de exit(); => die('Hello world');
+		}
+
+	}
+	else {
+		$errorsText = implode('<br>', $errors); 
+	}
+}
+
+	
+
+?><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ajouter une recette</title>
+
+<style>
+label {
+	display: inline-block;
+	min-width: 200px;
+	margin-bottom: 7px;
+}
+input, select, textarea {
+	margin-bottom: 7px;
+}
+</style>
+</head>
+<body>
+
+	<h1>Ajouter une recette</h1>
+
+	<?php if(isset($errorsText)): ?>
+		<p style="color:red;"><?php echo $errorsText; ?></p>
+	<?php endif; ?>
+
+	<?php if(isset($success)): ?>
+		<p style="color:green;"><?php echo $success; ?></p>
+	<?php endif; ?>
+
+
+	<?php if($displayForm === true): ?>
+	<form method="post" enctype="multipart/form-data">
+	
+		<label for="title">Titre de la recette</label>
+		<input type="text" name="title" id="title">
+
+		<br>
+		<label for="content">Description</label>
+		<textarea name="content" id="content"></textarea>
+
+		<br>
+		<label for="picture">Photo</label>
+		<input type="file" name="picture" id="picture" accept="image/*">
+
+		      
+<!--
+        <br>
+		<label for="date_create">Date de creation</label>
+		<input type="text" name="date_create" id="date_create">
+-->
+		
+		<br>
+		<label for="id_user">Deposeur de la recette</label>
+		<input type="text" name="id_user" id="id_user">
+		
+		<br>
+		<input type="submit" value="Envoyer ma recette">
+	</form>
+	<?php endif; ?>
+
+
+</body>
+>>>>>>> origin/herve
 </html>
