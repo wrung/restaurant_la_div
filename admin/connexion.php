@@ -11,9 +11,7 @@ if(isset($_GET['message']) && !empty($_GET['message'])){
 }
 
 
-if(!empty($_POST)){
-        // On nettoie les données en retirant les espaces en début et fin de chaine(trim)
-        // puis en supprimant les balises html et php 
+if(!empty($_POST)){ 
 
     foreach($_POST as $key => $value){
         $post[$key] = trim(strip_tags($value));
@@ -40,7 +38,7 @@ if(!empty($_POST)){
                     session_start();
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['username'] = $user['username'];
-                  //  $_SESSION['prenom'] = $user['prenom'];
+                   
 
                     header("Location: ./index.php");
                 }
@@ -53,9 +51,9 @@ if(!empty($_POST)){
             }
 
         } else {
-                // Erreur de dévellopement
+                
             var_dump($query->errorInfo());
-                die; // alias de exit(); => die('Hello World');
+                die; 
             }
         }
     }

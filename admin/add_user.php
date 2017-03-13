@@ -7,7 +7,6 @@ require_once './inc/connect.php';
    
     if(!empty($_POST)){
 
-
         foreach($_POST as $key => $value){
             $post[$key] = trim(strip_tags($value));
         }
