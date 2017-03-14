@@ -1,0 +1,152 @@
+body {
+    background: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px
+}
+a.bouton {
+    display: inline-block;
+    background: #90837B;
+    padding: 20px;
+    font-family: 'Courgette', cursive;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+}
+a:hover{
+    opacity: .7
+}
+.text-center {
+    text-align: center
+}
+header.top {
+    background: #B48267;
+    height: 90px;
+    width: 1000px;
+    margin: 0 auto
+}
+header.top div.coordonnees {
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px
+}
+header.top div.coordonnees h1 {
+    margin: 0;
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    color: #505050
+}
+header.top div.coordonnees p {
+    margin: 0;
+    color: #505050
+}
+header.top div.contact {
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px
+}
+header.top div.contact a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #505050;
+}
+div.slider {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 1000px;
+    margin: 0 auto;
+    background: #505050
+}
+div.slider img {
+    width: 940px;
+    height: 396px;
+    object-fit: cover;
+}
+main {
+    box-sizing: border-box;
+    padding: 20px 0;
+    width: 1000px;
+    margin: 0 auto;
+    background: #483932
+}
+main h2 {
+    margin: 0 0 40px;
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center
+}
+main article.vignette {
+    display: inline-block;
+    width: 200px;
+    margin-left: 100px;
+}
+main article.vignette img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover
+}
+main article.vignette a, a.link_recipe {
+    display: block;
+    font-family: 'Courgette', cursive;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+}
+legend{
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center 
+}
+footer {
+    background: #505050;
+    height: 40px;
+    width: 1000px;
+    margin: 0 auto
+}
+/******** Partie list_recipes *******/
+
+/* fond d'ecran list_recipes */
+.page_list{
+    width: 940px;
+    background: #483932;
+    color:#e0d9d3;
+    margin-left: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+h1{
+    margin-left: 25px;
+}
+a{
+    color:#e0d9d3;  
+}
+
+td{
+    padding: 20px;
+}
+
+td img{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* Partie view_recipes */
+
+.page_view{
+    width: 1000px;
+    background: #483932;
+    text-align: center;
+    color:#e0d9d3;
+    margin-left: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
