@@ -35,28 +35,42 @@
             $post[$key] = trim(strip_tags($value));
 
         // gestion des erreurs
-        if(empty($post['password']))
-            $errors[] = 'Le champ Mot de passe est vide.';
+        if(!$newMode) {
+            if(empty($post['old']))
+                $errors[] = 'Le champ Ancien Mot de passe est vide.';
+            else{
+                $email = $_SESSION['user']['email'];
+
+                $select = $bdd->prepare('SELECT password FROM users WHERE email=:email');
+                $select->bindValue(':email', $email);
+
+                if($select->execute()){
+                    $user = $select->fetch(PDO::FETCH_ASSOC);
+                    if(!password_verify($post['old'], $user['password'])){
+                        $errors[] = 'L\'Ancien Mot de passe est invalide.';
+                    }
+                }
+            }
+        }
+
+        if(empty($post['new']))
+            $errors[] = 'Le champ Nouveau Mot de passe est vide.';
 
         if(empty($post['confirm']))
             $errors[] = 'Le champ Confirmation du mot de passe est vide.';
-        elseif($post['confirm'] !== $post['password'])
+        elseif($post['confirm'] !== $post['new'])
             $errors[] = 'Les champs ne correspondent pas.';
         
         if(count($errors) !== 0){
-            $errorsText = 'Erreurs : ';
-            $errorsText .= implode('<br>', $errors);
+            $errorsText = implode('<br>', $errors);
         }
 
         // données valides
         else {
-            if($newMode === false){
-                $email = $_SESSION['user']['email'];
-            }
 
             $update = $bdd->prepare('UPDATE users SET password=:password, token=:token WHERE email=:email');
             $update->bindValue(':email', $email);
-            $update->bindValue(':password', password_hash($post['password'], PASSWORD_DEFAULT));
+            $update->bindValue(':password', password_hash($post['new'], PASSWORD_DEFAULT));
             $update->bindValue(':token', bin2hex(openssl_random_pseudo_bytes(16)));
 
             if($update->execute()) {
@@ -81,9 +95,16 @@
     <h1>Changer de mot de passe</h1>
 
     <form method="post" >
+
+    <?php if(!$newMode) : ?>
         <p>
-            <label for="password">Nouveau mot de passe</label><br>
-            <input type="password" name="password" id="password">
+            <label for="old">Ancien mot de passe</label><br>
+            <input type="password" name="old" id="old">
+        </p>
+    <?php endif; ?>
+        <p>
+            <label for="new">Nouveau mot de passe</label><br>
+            <input type="password" name="new" id="new">
         </p>
         <p>
             <label for="confirm">Confirmation du mot de passe</label><br>

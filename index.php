@@ -43,7 +43,7 @@
     </header>
 
     <div class="slider">
-        <img src="<?=$infos['cover'] ?>" alt="projecteur">
+        <img src="admin/<?=$infos['cover'] ?>" alt="projecteur">
     </div>
 
     <main>
@@ -52,8 +52,8 @@
         <section>
         <?php foreach($recipes as $recipe) : ?>
             <article class="vignette">
-                <img src="<?=$recipe['picture'] ?>" alt="<?=$recipe['title'] ?>">
-                <a href="view_recette.php?id=<?=$recipe['id'] ?>">lire la recette</a>
+                <img src="admin/<?=$recipe['picture'] ?>" alt="<?=$recipe['title'] ?>">
+                <a href="view_recipe.php?id=<?=$recipe['id'] ?>">lire la recette</a>
             </article>
         <?php endforeach; ?>
         </section>
@@ -61,7 +61,7 @@
         <br>
         <br>
         <p class="text-center">
-            <a class="bouton" href="recettes.php">Découvrir toutes<br>les recettes des chefs</a>
+            <a class="bouton" href="recipes.php">Découvrir toutes<br>les recettes des chefs</a>
         </p>
     </main>
 

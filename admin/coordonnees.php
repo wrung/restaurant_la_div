@@ -2,7 +2,7 @@
     require_once '../inc/connect.php';
     session_start();
 
-    if(!isset($_SESSION['user']) || empty($_SESSION['user']) || $_SESSION['user']['role'] != 'administrateur'){
+    if(!isset($_SESSION['isLogged']) || empty($_SESSION['isLogged']) || $_SESSION['user']['role'] != 'administrateur'){
         header('location:index.php');
         die;
     }
@@ -19,17 +19,17 @@
         if(empty($post['name']))
             $errors[] = 'Le Nom doit être renseigné.';
         
-        if(strlen($post['street']))
+        if(empty($post['street']))
             $errors[] = 'L\'Adresse doit être renseignée.';
         
-        if(strlen($post['zipcode']))
+        if(empty($post['zipcode']))
             $errors[] = 'Le Code postal doit être renseigné.';
         
-        if(strlen($post['city']))
+        if(empty($post['city']))
             $errors[] = 'La Ville doit être renseignée.';
         
         if(!preg_match("#^[0-9]{10}$#", $post['phone']))
-            $errors[] = 'Le numéro de téléphone n\'est pas valide.';
+            $errors[] = 'Le numéro de téléphone doit comporter uniquement 10 chiffres.';
 
 
         if(count($errors) !== 0){
@@ -50,7 +50,7 @@
 
             if($update->execute()) {
                 $successText = 'Les coordonées ont bien été modifiés !';
-                header('refresh:3;url:index.php');
+                header('refresh:3;url=index.php');
             }
         }
     }

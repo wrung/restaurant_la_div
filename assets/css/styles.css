@@ -58,7 +58,9 @@ div.slider {
     background: #505050
 }
 div.slider img {
-    width: 100%
+    width: 940px;
+    height: 396px;
+    object-fit: cover;
 }
 main {
     box-sizing: border-box;
@@ -83,8 +85,9 @@ main article.vignette {
 main article.vignette img {
     width: 200px;
     height: 200px;
+    object-fit: cover
 }
-main article.vignette a {
+main article.vignette a, a.link_recipe {
     display: block;
     font-family: 'Courgette', cursive;
     padding: 10px 0;
@@ -94,9 +97,56 @@ main article.vignette a {
     font-weight: 100;
     color: #fff;
 }
+legend{
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center 
+}
 footer {
     background: #505050;
     height: 40px;
     width: 1000px;
     margin: 0 auto
+}
+/******** Partie list_recipes *******/
+
+/* fond d'ecran list_recipes */
+.page_list{
+    width: 940px;
+    background: #483932;
+    color:#e0d9d3;
+    margin-left: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+h1{
+    margin-left: 25px;
+}
+a{
+    color:#e0d9d3;  
+}
+
+td{
+    padding: 20px;
+}
+
+td img{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* Partie view_recipes */
+
+.page_view{
+    width: 1000px;
+    background: #483932;
+    text-align: center;
+    color:#e0d9d3;
+    margin-left: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
 }

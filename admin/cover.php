@@ -51,11 +51,12 @@
 
 
             $update = $bdd->prepare('UPDATE options SET cover=:cover WHERE id=:id');
-            $update->bindValue(':cover', $post['cover']);
+            $update->bindValue(':id', 1);
+            $update->bindValue(':cover', "$uploadDir/$name");
 
             if($update->execute()) {
                 $successText = 'La couverture a bien été modifiée !';
-                header('refresh:3;url:index.php');
+                header('refresh:3;url=index.php');
             }
         }
     }
