@@ -33,28 +33,12 @@ body{
 }
 header{
     
-    background-color: #B58263;
+    background-color: #4B524D;
     background-repeat: no-repeat;
     text-align: center;
+    width: auto;
+    height: 50px;
 }
-
- #article{
-    
-    width: 50px;
-    height: 50px;
-    float: left;
-
-    
- }
- #text{
-    width: 400px;
-    height: 50px;
-    font-size: 30px;
-    float: right;
-    background-color: #B38367;
-    color: #E0D9D3;
-    
- }
  h1{
     color: #E0D9D3;
  }

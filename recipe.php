@@ -105,9 +105,13 @@ if(!empty($_POST)){
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="GIT/restaurant_la_div/assets/css/style.css">
 <title>Ajouter une recette</title>
 
 <style>
+body{
+    background-color: #483932 ;
+}
 label {
 	display: inline-block;
 	min-width: 200px;
@@ -116,6 +120,20 @@ label {
 input, select, textarea {
 	margin-bottom: 7px;
 }
+header{
+    
+    background-color: #4B524D;
+    text-align: center;
+    width: auto;
+    height: 50px;
+}
+ h1{
+    color: #E0D9D3;
+ }
+form{
+	background-color: #B38367;
+}
+
 </style>
 </head>
 <body>

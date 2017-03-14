@@ -28,6 +28,8 @@ header{
     background-color: #B58263;
     background-repeat: no-repeat;
     text-align: center;
+    width: auto;
+    height: 150px;
 }
 
  #article{
@@ -50,7 +52,12 @@ header{
  h1{
     color: #E0D9D3;
  }
- 
+ td{
+ 	color: #E0D9D3;
+ }
+ th{
+ 	color: white;
+ }
 </style>
 </head>
 <body>
