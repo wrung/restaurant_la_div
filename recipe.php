@@ -112,27 +112,35 @@ if(!empty($_POST)){
 body{
     background-color: #483932 ;
 }
-label {
-	display: inline-block;
-	min-width: 200px;
-	margin-bottom: 7px;
-}
-input, select, textarea {
-	margin-bottom: 7px;
-}
 header{
     
     background-color: #4B524D;
     text-align: center;
-    width: auto;
-    height: 50px;
+    margin: 0, auto;
 }
+label {
+	display: inline-block;
+	min-width: 200px;
+	margin-bottom: 26px;
+	margin-left: 50px;
+    margin-right: auto;
+    color: #4B524D;
+}
+.input, select, textarea {
+	margin-bottom: 7px;
+	text-align: center;
+}
+
  h1{
     color: #E0D9D3;
+    text-align: center;
  }
 form{
 	background-color: #B38367;
+	margin-left: 500px;
+    margin-right: 500px;
 }
+
 
 </style>
 </head>
